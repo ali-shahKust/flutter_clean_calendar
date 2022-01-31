@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class CleanCalendarEvent {
   String summary;
   String description;
+  String status;
+  String type;
+  int difference;
   String location;
   DateTime startTime;
   DateTime endTime;
@@ -15,7 +18,10 @@ class CleanCalendarEvent {
       this.location = '',
       required this.startTime,
       required this.endTime,
-      this.color = Colors.blue,
+        required this.type,
+        required this.status,
+        required this.difference,
+        this.color = Colors.blue,
       this.isAllDay = false,
       this.isDone = false});
 }
